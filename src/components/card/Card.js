@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./Card.css"
 import { Link } from "react-router-dom";
+import key from "../key.json";
 
 
 function Card() {
@@ -14,7 +15,7 @@ function Card() {
     // Die Callback Funktion wird hier nur beim ersten render ausgeführt
     // Verhindert unnötige ladezeiten, gerade wichtig bei mobilen endgeräten
     useEffect(() => {
-        fetch("https://newsapi.org/v2/top-headlines?country=de&apiKey=892e4edc4b1b469ab84bb6ff3af0060a")
+        fetch(`https://newsapi.org/v2/top-headlines?country=de&apiKey=${key.apiKey}`)
             .then(res => res.json())
             .then((articlesAPI) => {
                 setNews(articlesAPI.articles);

@@ -7,6 +7,8 @@ import React, { useState, useEffect } from 'react';
 //importieren Router
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Card from "./components/card/Card";
+import Home from "./pages/Home";
+
 
 
 
@@ -14,7 +16,8 @@ function App() {
 
   return (
     <div>
-      <Card />
+      <Home />
+      {/* <Card /> */}
     </div>
 
 

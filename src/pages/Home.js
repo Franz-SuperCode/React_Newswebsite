@@ -1,10 +1,13 @@
-import Button from "../components/button/Button";
+import Card from "../components/card/Card";
+
+
 
 function Home() {
     return (
         <div>
             <h1>Welcome to my simple Blog</h1>
-            <Button name="Go to articles" />
+            <Card />
+
         </div>
 
     )
